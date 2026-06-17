@@ -1,40 +1,56 @@
 # Codezen Brand Assets
 
-Official brand and press kit assets for [Codezen](https://codezen.tech) — a blockchain and Web3 cybersecurity firm specializing in smart contract audits, security consulting, and disaster recovery for decentralized systems.
+Official brand and press kit for [Codezen](https://codezen.tech) — a blockchain and Web3 cybersecurity firm specializing in smart contract audits, security consulting, and disaster recovery for decentralized systems.
 
 ## Contents
 
 | File / Folder | Description |
 |---|---|
-| `brand.css` | Ready-to-use CSS — `@font-face` declarations and all design tokens as custom properties |
-| `logos/png` | Logo variants in PNG format |
-| `logos/svg` | Logo variants in SVG format (recommended for web use) |
-| `logos/pdf` | Logo variants in PDF format (recommended for print) |
-| `icons/` | Service icons in SVG format |
-| `fonts/` | Brand fonts — Outfit (variable & static weights) and Felix Titling |
-| `brand-guide/` | Branding guide PDF with colors, typography, and usage rules |
-| `social-media/` | Header images for Facebook, LinkedIn, and X |
+| `brand.css` | Drop-in CSS — all design tokens and `@font-face` declarations |
+| `BRANDING.md` | Full brand guide — visual language, voice, usage rules |
+| `logos/svg/` | Logo variants in SVG (recommended for web use) |
+| `logos/png/` | Logo variants in PNG |
+| `logos/pdf/` | Logo variants in PDF (recommended for print) |
+| `icons/` | Five bespoke cyan service icons + social/UI glyphs |
+| `icons/chains/` | Blockchain ecosystem marks (bitcoin, ethereum, cosmos, solana, polkadot) |
+| `fonts/outfit/` | Outfit — brand display and body font (variable + static weights) |
+| `fonts/jetbrains-mono/` | JetBrains Mono — technical detail layer (eyebrows, metadata, audit IDs) |
+| `fonts/felixti.ttf` | Felix Titling — logo wordmark only |
+| `social-media/` | Header images for LinkedIn, Facebook, and X |
 
-## Logo Variants
+## Logo variants
 
-Each logo is available in the following variants:
+Each logo is available in the following variants (consistent naming across SVG / PNG / PDF):
 
-- **full color** — primary logo on transparent background
-- **full color white bckg** — primary logo on white background
-- **white** — white logo on transparent background
-- **white with blue bckg** — white logo on brand blue background
-- **isologo with blue bckg** — icon-only mark on brand blue background
-- **isologo with white bckg** — icon-only mark on white background
-- **white trasparencies** — white logo with transparency effects
-- **white trasparencies with blue bckg** — white logo with transparency effects on blue background
+| Name | Use when |
+|---|---|
+| `full-color` | Default — on white or light backgrounds |
+| `full-color-white-bg` | Same, with white bounding box |
+| `white` | On dark or photo backgrounds |
+| `white-blue-bg` | White logo on brand blue |
+| `white-transparencies` | On photos or textured backgrounds |
+| `white-transparencies-blue-bg` | On brand blue with added depth |
+| `isologo-white-bg` | Mark only — light backgrounds |
+| `isologo-blue-bg` | Mark only — dark or blue backgrounds |
 
-## Usage
+## Quick start (web)
 
-See [BRANDING.md](./BRANDING.md) for the full brand guidelines — colors, typography, logo do's and don'ts, icon usage, and imagery style.
+```html
+<link rel="stylesheet" href="brand.css">
+```
 
-The original PDF version is also available at `brand-guide/CODEZEN-BRANDING-GUIDE.pdf`.
+Then use tokens:
+
+```css
+background: var(--field-bg);
+color: var(--text-strong);
+font-family: var(--font-body);
+accent-color: var(--cz-cyan);
+```
+
+See [BRANDING.md](./BRANDING.md) for the full brand guidelines.
 
 ## Contact
 
-For press inquiries: [info@codezen.tech](mailto:info@codezen.tech)  
+For press inquiries: [info@codezen.tech](mailto:info@codezen.tech)
 Website: [codezen.tech](https://codezen.tech)

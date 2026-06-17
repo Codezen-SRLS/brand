@@ -1,51 +1,85 @@
 /* ==========================================================================
-   Codezen Brand CSS
-   Drop this file into your project to get fonts and design tokens.
-   All paths are relative to this file's location at repo root.
+   Codezen Brand CSS — "Prism" system
+   Drop into your project and link this file. All font paths are relative
+   to this file at repo root. Tokens use the --cz-* namespace.
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
    Fonts
    -------------------------------------------------------------------------- */
 
-/* Outfit — variable font (preferred, covers all weights 100–900) */
+/* Outfit — UI display and body text */
 @font-face {
-  font-family: 'Outfit';
-  src: url('fonts/outfit/Outfit-VariableFont_wght.ttf') format('truetype');
-  font-weight: 100 900;
+  font-family: "Outfit";
+  src: url("fonts/outfit/static/Outfit-Light.ttf") format("truetype");
+  font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
-
-/* Outfit — static fallbacks for the three weights used in the brand */
 @font-face {
-  font-family: 'Outfit';
-  src: url('fonts/outfit/static/Outfit-Regular.ttf') format('truetype');
+  font-family: "Outfit";
+  src: url("fonts/outfit/static/Outfit-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
-
 @font-face {
-  font-family: 'Outfit';
-  src: url('fonts/outfit/static/Outfit-SemiBold.ttf') format('truetype');
+  font-family: "Outfit";
+  src: url("fonts/outfit/static/Outfit-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Outfit";
+  src: url("fonts/outfit/static/Outfit-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Outfit";
+  src: url("fonts/outfit/static/Outfit-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Outfit";
+  src: url("fonts/outfit/static/Outfit-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* JetBrains Mono — technical detail layer: eyebrows, indices, metadata,
+   audit IDs, repo paths, severities, status chips. Uppercase, wide tracking. */
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("fonts/jetbrains-mono/JetBrainsMono-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("fonts/jetbrains-mono/JetBrainsMono-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("fonts/jetbrains-mono/JetBrainsMono-SemiBold.woff2") format("woff2");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
 
+/* Felix Titling — logo wordmark ONLY. Never use for body, headings, or UI text. */
 @font-face {
-  font-family: 'Outfit';
-  src: url('fonts/outfit/static/Outfit-Bold.ttf') format('truetype');
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-
-/* Felix Titling — logo wordmark only. Do not use for body or heading text. */
-@font-face {
-  font-family: 'Felix Titling';
-  src: url('fonts/felixti.ttf') format('truetype');
+  font-family: "Felix Titling";
+  src: url("fonts/felixti.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
   font-display: block;
@@ -57,44 +91,194 @@
 
 :root {
 
-  /* Logo colors — use only in the logo itself */
-  --color-dark-blue:  #312e81;
-  --color-navy-blue:  #0760ab;
-  --color-light-blue: #168ccd;
+  /* --- Logo / brand blues (also drive atmosphere & the iridescent range) ---
+     Use in the logo itself. As UI fills use only for atmospheric glow or
+     the iridescent gradient -- never as flat interactive fills.           */
+  --cz-logo-dark-blue:  #312e81;
+  --cz-logo-navy:       #0760ab;
+  --cz-logo-light-blue: #168ccd;
 
-  /* Brand accent */
-  --color-cyan:  #04d9ff;
+  /* RGB channels for glow and alpha composition */
+  --rgb-cyan:      4, 217, 255;
+  --rgb-indigo:   49,  46, 129;
+  --rgb-navy:      7,  96, 171;
+  --rgb-lightblue: 22, 140, 205;
 
-  /* Base surfaces */
-  --color-night: #212529;
-  --color-white: #ffffff;
+  /* --- Accent --- */
+  --cz-cyan:        #04d9ff;   /* hero interactive accent */
+  --cz-cyan-bright: #2ee2ff;   /* hover / highlight */
+  --cz-cyan-soft:   #5be4ff;   /* mono labels, small accents on dark */
+  --cz-cyan-ink:    #008dd3;   /* accent on light backgrounds */
 
-  /* Gray scale */
-  --color-gray-100: #f8f9fa;
-  --color-gray-200: #e9ecef;
-  --color-gray-300: #dee2e6;
-  --color-gray-400: #ced4da;
-  --color-gray-500: #adb5bd;
-  --color-gray-600: #6c757d;
-  --color-gray-700: #495057;
-  --color-gray-800: #343a40;
-  --color-gray-900: #212529;
+  /* --- Base atmosphere (near-black, faint indigo tint) --- */
+  --cz-void:   #07080d;   /* deepest background */
+  --cz-base:   #0a0b12;   /* page base */
+  --cz-base-2: #0c0e17;   /* gradient end */
+  --cz-night:  #11131d;   /* solid raised surface (non-glass) */
+  --cz-white:  #ffffff;
 
-  /* Semantic aliases */
-  --color-bg-dark:       var(--color-night);
-  --color-bg-light:      var(--color-white);
-  --color-accent:        var(--color-cyan);
-  --color-text-on-dark:  var(--color-white);
-  --color-text-on-light: var(--color-gray-900);
+  /* --- Gray scale --- */
+  --cz-gray-100: #f8f9fa;
+  --cz-gray-200: #e9ecef;
+  --cz-gray-300: #dee2e6;
+  --cz-gray-400: #ced4da;
+  --cz-gray-500: #adb5bd;
+  --cz-gray-600: #6c757d;
+  --cz-gray-700: #495057;
+  --cz-gray-800: #343a40;
+  --cz-gray-900: #212529;
 
-  /* Typography */
-  --font-logo:   'Felix Titling', serif;
-  --font-body:   'Outfit', Arial, sans-serif;
+  /* --- Glass surfaces (the crystalline material) --- */
+  --glass:             rgba(255, 255, 255, 0.04);
+  --glass-2:           rgba(255, 255, 255, 0.06);
+  --glass-3:           rgba(255, 255, 255, 0.09);
+  --glass-line:        rgba(255, 255, 255, 0.10);
+  --glass-line-strong: rgba(255, 255, 255, 0.18);
+  --glass-blur:        12px;
 
-  --font-weight-regular:  400;
-  --font-weight-semibold: 600;
-  --font-weight-bold:     700;
+  /* --- Iridescent accent (cyan → bright → light-blue → cool white) --- */
+  --iris:      linear-gradient(100deg, #04d9ff 0%, #2ee2ff 28%, #168ccd 68%, #cfe9ff 100%);
+  --iris-rule: linear-gradient(90deg, transparent, rgba(var(--rgb-cyan), 0.55), rgba(var(--rgb-lightblue), 0.35), transparent);
 
-  --font-size-base: 1rem;    /* 16px */
-  --line-height-base: 1.5;
+  /* --- Semantic aliases — DARK theme (default) --- */
+  --surface-base:    var(--cz-base);
+  --surface-raised:  var(--glass);
+  --surface-raised-2: var(--glass-2);
+  --surface-solid:   var(--cz-night);
+  --surface-overlay: rgba(5, 6, 11, 0.66);
+
+  --text-strong: #f4f7ff;
+  --text-body:   rgba(232, 238, 255, 0.66);
+  --text-muted:  rgba(232, 238, 255, 0.40);
+  --text-accent: var(--cz-cyan-soft);
+
+  --border-default: var(--glass-line);
+  --border-strong:  var(--glass-line-strong);
+  --border-accent:  rgba(var(--rgb-cyan), 0.55);
+
+  --accent:          var(--cz-cyan);
+  --accent-contrast: #04121a;   /* text/icon on a cyan fill */
+
+  --tag-bg:   var(--glass-2);
+  --tag-text: var(--text-strong);
+
+  /* --- Status --- */
+  --status-success: #2fd48a;
+  --status-warning: #f5b945;
+  --status-danger:  #ff5c5c;
+  --status-info:    var(--cz-cyan);
+
+  /* --- Typography --- */
+  --font-body: "Outfit", Arial, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  --font-logo: "Felix Titling", "Outfit", serif;   /* logo wordmark only */
+
+  --fw-light:    300;
+  --fw-regular:  400;
+  --fw-medium:   500;
+  --fw-semibold: 600;
+  --fw-bold:     700;
+
+  --fs-display:  72px;   /* hero headline */
+  --fs-stat:     52px;   /* iridescent metric numbers */
+  --fs-h1:       56px;
+  --fs-h2:       40px;   /* section heading */
+  --fs-h3:       24px;   /* card title */
+  --fs-h4:       20px;
+  --fs-body-lg:  19px;   /* primary paragraph */
+  --fs-body:     16px;
+  --fs-small:    15px;
+  --fs-mono:     12px;   /* eyebrows / kickers */
+  --fs-mono-sm:  11px;   /* dense metadata */
+
+  --lh-display: 1.04;
+  --lh-tight:   1.1;
+  --lh-snug:    1.25;
+  --lh-body:    1.5;
+  --lh-relaxed: 1.6;
+
+  --ls-display:   -0.03em;
+  --ls-tight:     -0.02em;
+  --ls-normal:     0;
+  --ls-mono:       0.14em;
+  --ls-mono-wide:  0.22em;
+  --ls-logo:       0.04em;
+
+  /* --- Spacing (4px base) --- */
+  --space-0:  0;
+  --space-1:  4px;
+  --space-2:  8px;
+  --space-3:  12px;
+  --space-4:  16px;
+  --space-5:  20px;
+  --space-6:  24px;
+  --space-8:  32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-20: 80px;
+  --space-24: 96px;
+
+  --section-y:     72px;
+  --container-max: 1240px;
+  --container-pad: 32px;
+
+  /* --- Shape — soft, rounded, elegant --- */
+  --radius-none: 0px;
+  --radius-sm:   10px;     /* fields, small chips */
+  --radius-md:   16px;     /* buttons, cards, tiles */
+  --radius-lg:   24px;     /* panels, hero visual, modal */
+  --radius-pill: 999px;    /* badges, toggles, status dots */
+
+  --border-w:        1px;
+  --border-w-strong: 2px;
+
+  /* --- Glow / shadow — diffuse, no hard rings --- */
+  --shadow-soft:  0 18px 50px -24px rgba(0, 0, 0, 0.6);
+  --shadow-card:  0 30px 70px -34px rgba(var(--rgb-cyan), 0.45);
+  --shadow-float: 0 40px 100px -40px rgba(0, 0, 0, 0.75);
+  --glow-cyan:        0 14px 50px -18px rgba(var(--rgb-cyan), 0.55);
+  --glow-cyan-strong: 0 18px 64px -16px rgba(var(--rgb-cyan), 0.70);
+
+  /* --- Atmospheric page background (apply to the outermost wrapper) --- */
+  --field-bg:
+    radial-gradient(900px 600px at 78% -8%,   rgba(var(--rgb-cyan),    0.10), transparent 60%),
+    radial-gradient(1000px 700px at 8% 12%,   rgba(var(--rgb-indigo),  0.38), transparent 58%),
+    radial-gradient(1100px 900px at 100% 100%, rgba(var(--rgb-navy),    0.18), transparent 60%),
+    linear-gradient(180deg, var(--cz-base), var(--cz-base-2));
+
+  /* --- Motion — calm and short --- */
+  --ease:     cubic-bezier(0.22, 0.61, 0.36, 1);
+  --ease-out: cubic-bezier(0.16, 1, 0.30, 1);
+  --dur-fast: 0.25s;
+  --dur:      0.40s;
+  --dur-slow: 0.60s;
+}
+
+/* --------------------------------------------------------------------------
+   Light theme overrides
+   -------------------------------------------------------------------------- */
+
+.light-mode,
+[data-theme="light"] {
+  --surface-base:    #eef1f6;
+  --surface-raised:  rgba(255, 255, 255, 0.7);
+  --surface-raised-2: rgba(255, 255, 255, 0.9);
+  --surface-solid:   #ffffff;
+  --surface-overlay: rgba(20, 24, 40, 0.4);
+
+  --text-strong: #11131d;
+  --text-body:   rgba(17, 19, 29, 0.66);
+  --text-muted:  rgba(17, 19, 29, 0.45);
+  --text-accent: var(--cz-cyan-ink);
+
+  --border-default: rgba(17, 19, 29, 0.12);
+  --border-strong:  rgba(17, 19, 29, 0.22);
+  --border-accent:  rgba(var(--rgb-lightblue), 0.6);
+
+  --accent:          var(--cz-cyan-ink);
+  --accent-contrast: #ffffff;
+
+  --tag-bg:   rgba(17, 19, 29, 0.06);
+  --tag-text: #11131d;
 }
