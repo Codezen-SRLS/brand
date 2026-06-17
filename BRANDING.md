@@ -131,6 +131,8 @@ font-family: var(--font-mono); /* "JetBrains Mono", ui-monospace, "SF Mono", Men
 | `white-transparencies-blue-bg.svg` | On brand blue with added depth |
 | `isologo-white-bg.svg` | Mark only — light backgrounds |
 | `isologo-blue-bg.svg` | Mark only — dark or blue backgrounds |
+| `mark-full-color.svg` | Transparent lotus mark, no wordmark or box — full color |
+| `mark-white.svg` | Transparent lotus mark, no wordmark or box — white |
 
 PNG and PDF versions follow the same naming convention in `logos/png/` and `logos/pdf/`.
 

@@ -32,6 +32,8 @@ Each logo is available in the following variants (consistent naming across SVG /
 | `white-transparencies-blue-bg` | On brand blue with added depth |
 | `isologo-white-bg` | Mark only — light backgrounds |
 | `isologo-blue-bg` | Mark only — dark or blue backgrounds |
+| `mark-full-color` | Transparent lotus, no wordmark or box — full color (SVG only) |
+| `mark-white` | Transparent lotus, no wordmark or box — white (SVG only) |
 
 ## Quick start (web)
 
