@@ -4,15 +4,15 @@ Official brand and press kit assets for [Codezen](https://codezen.tech) — a bl
 
 ## Contents
 
-| Folder | Description |
+| File / Folder | Description |
 |---|---|
+| `brand.css` | Ready-to-use CSS — `@font-face` declarations and all design tokens as custom properties |
 | `logos/png` | Logo variants in PNG format |
 | `logos/svg` | Logo variants in SVG format (recommended for web use) |
 | `logos/pdf` | Logo variants in PDF format (recommended for print) |
 | `icons/` | Service icons in SVG format |
 | `fonts/` | Brand fonts — Outfit (variable & static weights) and Felix Titling |
 | `brand-guide/` | Branding guide PDF with colors, typography, and usage rules |
-| `business-card/` | Business card designs (front & back) in PNG and PDF |
 | `social-media/` | Header images for Facebook, LinkedIn, and X |
 
 ## Logo Variants

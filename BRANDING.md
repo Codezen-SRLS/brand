@@ -127,6 +127,7 @@ Font files are in `fonts/`.
 - Minimum body size: 12pt / 16px for legibility
 - Line height: 1.5× the font size
 - Do not substitute fonts without brand approval
+- For a ready-to-use implementation of all tokens and `@font-face` declarations, see [`brand.css`](./brand.css) at repo root
 
 ---
 
@@ -144,7 +145,7 @@ Service icons are in `icons/`. All five are SVG line art in Cyan (`#04D9FF`).
 
 ### Icon usage
 
-Icons are designed as line art on a **dark background**. Always place them on a dark container (Night `#212529` or Dark Blue `#322A84`). On light backgrounds, the icons will lose definition and appear weak — do not use them this way without a backing element.
+Icons are designed as line art on a **dark background**. Always place them on a dark container (Night `#212529` or Dark Blue `#312e81`). On light backgrounds, the icons will lose definition and appear weak — do not use them this way without a backing element.
 
 Recommended container: dark rounded rectangle or square, icon centered with ~20% padding.
 

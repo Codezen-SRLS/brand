@@ -1,0 +1,100 @@
+/* ==========================================================================
+   Codezen Brand CSS
+   Drop this file into your project to get fonts and design tokens.
+   All paths are relative to this file's location at repo root.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Fonts
+   -------------------------------------------------------------------------- */
+
+/* Outfit — variable font (preferred, covers all weights 100–900) */
+@font-face {
+  font-family: 'Outfit';
+  src: url('fonts/outfit/Outfit-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Outfit — static fallbacks for the three weights used in the brand */
+@font-face {
+  font-family: 'Outfit';
+  src: url('fonts/outfit/static/Outfit-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Outfit';
+  src: url('fonts/outfit/static/Outfit-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Outfit';
+  src: url('fonts/outfit/static/Outfit-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Felix Titling — logo wordmark only. Do not use for body or heading text. */
+@font-face {
+  font-family: 'Felix Titling';
+  src: url('fonts/felixti.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: block;
+}
+
+/* --------------------------------------------------------------------------
+   Design tokens
+   -------------------------------------------------------------------------- */
+
+:root {
+
+  /* Logo colors — use only in the logo itself */
+  --color-dark-blue:  #312e81;
+  --color-navy-blue:  #0760ab;
+  --color-light-blue: #168ccd;
+
+  /* Brand accent */
+  --color-cyan:  #04d9ff;
+
+  /* Base surfaces */
+  --color-night: #212529;
+  --color-white: #ffffff;
+
+  /* Gray scale */
+  --color-gray-100: #f8f9fa;
+  --color-gray-200: #e9ecef;
+  --color-gray-300: #dee2e6;
+  --color-gray-400: #ced4da;
+  --color-gray-500: #adb5bd;
+  --color-gray-600: #6c757d;
+  --color-gray-700: #495057;
+  --color-gray-800: #343a40;
+  --color-gray-900: #212529;
+
+  /* Semantic aliases */
+  --color-bg-dark:       var(--color-night);
+  --color-bg-light:      var(--color-white);
+  --color-accent:        var(--color-cyan);
+  --color-text-on-dark:  var(--color-white);
+  --color-text-on-light: var(--color-gray-900);
+
+  /* Typography */
+  --font-logo:   'Felix Titling', serif;
+  --font-body:   'Outfit', Arial, sans-serif;
+
+  --font-weight-regular:  400;
+  --font-weight-semibold: 600;
+  --font-weight-bold:     700;
+
+  --font-size-base: 1rem;    /* 16px */
+  --line-height-base: 1.5;
+}
