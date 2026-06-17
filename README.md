@@ -30,7 +30,9 @@ Each logo is available in the following variants:
 
 ## Usage
 
-Refer to `brand-guide/CODEZEN-BRANDING-GUIDE.pdf` for full guidelines on colors, typography, spacing, and correct logo usage.
+See [BRANDING.md](./BRANDING.md) for the full brand guidelines — colors, typography, logo do's and don'ts, icon usage, and imagery style.
+
+The original PDF version is also available at `brand-guide/CODEZEN-BRANDING-GUIDE.pdf`.
 
 ## Contact
 
