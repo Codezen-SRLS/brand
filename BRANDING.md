@@ -61,11 +61,11 @@ Always maintain a clear space around the logo equal to the height and width of t
 
 ### Logo colors
 
-| Name | HEX | RGB | CMYK | Usage |
-|---|---|---|---|---|
-| Dark Blue | `#322A84` | 50, 42, 132 | 99 96 7 1 | Primary logo color, dominant in mark |
-| Navy Blue | `#005FAB` | 0, 95, 171 | 92 60 0 0 | Secondary logo color |
-| Light Blue | `#008DD3` | 0, 141, 211 | 79 33 0 0 | Accent in logo mark |
+| Name | HEX | RGB | Usage |
+|---|---|---|---|
+| Dark Blue | `#312e81` | 49, 46, 129 | Primary logo color, dominant in mark |
+| Navy Blue | `#0760ab` | 7, 96, 171 | Secondary logo color |
+| Light Blue | `#168ccd` | 22, 140, 205 | Accent in logo mark |
 
 ### Secondary colors (web & digital)
 
